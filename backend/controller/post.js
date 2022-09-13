@@ -16,18 +16,7 @@ exports.getOnePost = (req, res, next) => {
 }
 
 exports.createPost = (req, res, next) => {
-  // const postParse = JSON.parse(req.body)
-  // delete postParse.userId 
-  // const post = new Post({
-  //   ...req.body,
-  //   userId: req.auth.userId,
-  //   pseudo: 'fsdfdsfs',
-  //   image: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`,
-  //   // likes: 0,
-  //   // dislikes: 0,
-  //   // usersLiked: [], 
-  //   // usersDisliked: []
-  // })
+  console.log(req.body.file);
   const newPost = new Post ({
     ...req.body,
     userId: req.auth.userId,
